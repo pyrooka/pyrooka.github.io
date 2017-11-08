@@ -4,11 +4,8 @@
 <script src="/lib/aframe-ar.js"> </script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-assets>
-        <a-asset-item id="robot" src="/model/robot.gltf"></a-asset-item>
-      </a-assets>
-      <a-marker-camera preset="custom" type="pattern" url="/marker/fmt.patt">
-        <a-entity gltf-model="#robot"></a-entity>
+      <a-marker-camera preset="hiro">
+        <a-text value="Hey dude!"></a-text>
       </a-marker-camera>
       <a-entity camera></a-entity>
     </a-scene>
