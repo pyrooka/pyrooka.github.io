@@ -1,4 +1,4 @@
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
 <script src="/ar/lib/aframe-ar.js"></script>
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
 
@@ -9,7 +9,7 @@
       <a-asset-item id="model" src="model/model.ply"></a-asset-item>
     </a-assets>
     -->
-    <a-entity ply-model="src: url(model/model.ply)" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+    <a-entity gltf-model="src: url(model/scene.gltf)" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
 
     <a-marker-camera preset="custom" type="pattern" url="/ar/marker/fmt.patt"></a-marker-camera>
   </a-scene>
