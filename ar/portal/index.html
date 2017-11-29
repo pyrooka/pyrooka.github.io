@@ -1,9 +1,9 @@
 <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
 <script src="../lib/aframe-ar.js"></script>
-<script src="../lib/three.js"></script>
+<script src="../lib/three.min.js"></script>
 <script src="src/aframe-portal-door.js"></script>
 <script src="src/threex-portal-door.js"></script>
-<script>ARjs.Context.baseURL = "/ar/"</script>
+<script>ARjs.Context.baseURL = "../../"</script>
 
 <body style="margin : 0px; overflow: hidden;">
 
@@ -18,6 +18,6 @@
 		</a-anchor>
 
 		<!-- Define a static camera -->
-		<a-camera-static preset="custom" type="pattern" url="../marker/fmt.patt"></a-camera-static>
+		<a-marker-camera preset="custom" type="pattern" url="../marker/fmt.patt"></a-marker-camera>
 	</a-scene>
 </body>
