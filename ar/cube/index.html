@@ -79,12 +79,13 @@
 
         // create atToolkitContext
         var arToolkitContext = new THREEx.ArToolkitContext({
-            cameraParametersUrl: THREEx.ArToolkitContext.baseURL + '/ar/data/camera_para.dat',
+            cameraParametersUrl: THREEx.ArToolkitContext.baseURL + '/data/camera_para.dat',
             detectionMode: 'mono',
             maxDetectionRate: 30,
             canvasWidth: 80*3,
             canvasHeight: 60*3,
         })
+        console.log('TEST:', THREEx.ArToolkitContext.baseURL)
         // initialize it
         arToolkitContext.init(function onCompleted(){
             // copy projection matrix to camera
@@ -107,7 +108,7 @@
         scene.add(markerRoot)
         var artoolkitMarker = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
             type : 'pattern',
-            patternUrl : THREEx.ArToolkitContext.baseURL + '/ar/marker/fmt.patt'
+            patternUrl : THREEx.ArToolkitContext.baseURL + '/marker/fmt.patt'
         })
 
         // build a smoothedControls
