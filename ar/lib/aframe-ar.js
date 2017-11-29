@@ -8215,13 +8215,6 @@ AFRAME.registerPrimitive('a-camera-static', AFRAME.utils.extendDeep({}, AFRAME.p
 		'camera': {},
 	},
 	mappings: {
-		'type': 'arjs-anchor.type',
-		'size': 'arjs-anchor.size',
-		'url': 'arjs-anchor.patternUrl',
-		'value': 'arjs-anchor.barcodeValue',
-		'preset': 'arjs-anchor.preset',
-		'minConfidence': 'arjs-anchor.minConfidence',
-		'markerhelpers': 'arjs-anchor.markerhelpers',
 	}
 }))
 
