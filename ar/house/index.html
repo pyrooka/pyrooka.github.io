@@ -8,8 +8,9 @@
         <a-marker-camera preset="custom" type="pattern" url="../marker/fmt.patt"></a-marker-camera>
     </a-scene>
     <script>
-        document.querySelector('a-scene').addEventListener('loaded', () => {
-          console.log('LOADED')
-        })
+      console.log('LOADING')
+      document.querySelector('a-entity').addEventListener('loaded', () => {
+        console.log('LOADED')
+      })
     </script>
 </body>
