@@ -3,8 +3,17 @@
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
 
 <body style="margin : 0px; overflow: hidden;">
+    <div id="check" style="position: fixed; top: 10px; width:100%; text-align: center; color: red">
+        <b>LOADING MODEL...</b>
+    </div>
     <a-scene embedded arjs>
         <a-entity gltf-model="src: url(model/scene.gltf)" animation-mixer rotation='0 0 0'scale='0.007 0.007 0.007'></a-entity>
         <a-marker-camera preset="custom" type="pattern" url="../marker/fmt.patt"></a-marker-camera>
     </a-scene>
+    <script>
+      // If the model loaded remove the text.
+      document.querySelector('#myModel').addEventListener('model-loaded', () => {
+        document.querySelector('#check').remove()
+      })
+    </script>
 </body>
