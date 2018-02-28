@@ -5135,6 +5135,8 @@ var THREEx = THREEx || {}
 
 ARjs.Context = THREEx.ArToolkitContext = function(parameters){
 	var _this = this
+
+	console.log('BASE_URL:', ARjs.Context.baseURL)
 	
 	_this._updatedAt = null
 	
