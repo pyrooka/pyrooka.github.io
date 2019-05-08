@@ -1,0 +1,23 @@
+baseURL = "http://pyrooka.github.io"
+languageCode = "en-us"
+title = "BN"
+theme = "hallo"
+
+[Author]
+    name = "Norbert"
+
+[params.colors]
+        background = "#EEEEEE"
+        foreground = "#fffff"
+        hover = "#ffba82"
+
+[params]
+    [[params.links]]
+        icon = "github"
+        title = "Github"
+        url = "https://github.com/pyrooka"
+    [[params.links]]
+        iconset = "fas"
+        icon = "cube"
+        title = "SketchFab"
+        url = "https://sketchfab.com/brandonx"
