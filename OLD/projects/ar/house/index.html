@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>House demo</title>
+        <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+        <script src="../lib/aframe-ar.js"></script>
+        <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110399292-1"></script>
+        <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-110399292-1');</script>
+    </head>
+    <body style="margin : 0px; overflow: hidden;">
+        <div id="check" style="position: fixed; top: 10px; width:100%; text-align: center; color: red">
+            <b>LOADING MODEL...</b>
+        </div>
+        <a-scene embedded arjs>
+            <a-entity id="myModel" ply-model="src: url(model/house.ply)" rotation="-90 0 0" scale="0.015 0.015 0.015"></a-entity>
+            <a-marker-camera preset="custom" type="pattern" url="../marker/fmt.patt"></a-marker-camera>
+        </a-scene>
+        <script>
+          // If the model loaded remove the text.
+          document.querySelector('#myModel').addEventListener('model-loaded', () => {
+            document.querySelector('#check').remove()
+          })
+        </script>
+    </body>
+</html>

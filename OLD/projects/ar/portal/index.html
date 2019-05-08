@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portal demo</title>
+		<script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+		<script src="../lib/aframe-ar.js"></script>
+		<script src="../lib/three.min.js"></script>
+		<script src="src/aframe-portal-door.js"></script>
+		<script src="src/threex-portal-door.js"></script>
+		<script>ARjs.Context.baseURL = "../"</script>
+		<script>THREEx.ArToolkitContext.baseURL = '../'</script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110399292-1"></script>
+		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-110399292-1');</script>
+	</head>
+	<body style="margin : 0px; overflow: hidden;">
+
+		<!-- Define your 3d scene and enabled ar.js -->
+		<a-scene embedded arjs="trackingMethod: best;">
+			<!-- Create a anchor to attach your augmented reality -->
+			<a-anchor hit-testing-enabled="true">
+
+				<!-- portal 360 with an image -->
+				<a-portal-door url="src/city.jpg" position="0 0 0" scale="0.7 1 0.7" rotation="0 90 0"><a-portal-door>
+
+			</a-anchor>
+
+			<!-- Define a static camera -->
+			<a-camera-static></a-camera-static>
+		</a-scene>
+	</body>
+</html>
